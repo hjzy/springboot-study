@@ -1,0 +1,28 @@
+person:
+  name: qinjiang
+  age: 3
+  happy: false
+  birth: 2000/01/01
+  maps: {k1: v1,k2: v2}
+  lists:
+    - code
+    - girl
+    - music
+  dog:
+    name: 旺财
+    age: 1
+
+person2:
+  name: qinjiang${random.uuid} # 随机uuid
+  email: yifan@yifansun.cn
+  age: ${random.int}  # 随机int
+  happy: false
+  birth: 2000/01/01
+  maps: {k1: v1,k2: v2}
+  lists:
+    - code
+    - girl
+    - music
+  dog:
+    name: ${person.hello:other}_旺财 #设定默认值为other，如果person.hello存在，则取该值
+    age: 1
