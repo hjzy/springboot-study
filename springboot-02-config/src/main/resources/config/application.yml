@@ -26,3 +26,24 @@ person2:
   dog:
     name: ${person.hello:other}_旺财 #设定默认值为other，如果person.hello存在，则取该值
     age: 1
+
+#选择要激活那个环境块
+spring:
+  profiles:
+    active: prod
+
+---
+server:
+  port: 8083
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+
+server:
+  port: 8084
+spring:
+  config:
+    activate:
+      on-profile: prod
